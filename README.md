@@ -1,6 +1,6 @@
 # [Forked] SPOTLED Python Library
 
-# Modification
+## Modification
 I used Bleak as it is cross platform and supports Mac OS with Core Bluetooth which I needed. 
 
 This library is currently broken will fix and tag it as latest.
