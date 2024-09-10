@@ -14,6 +14,18 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/iwalton3/python-spotled",
     packages=find_packages(),  # Automatically find packages
+    extras_require={
+        'bleak': [
+            'bleak',
+        ],
+        'gattlib': [
+            'gattlib',
+        ],
+        'all': [
+            'bleak',
+            'gattlib',
+        ],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
