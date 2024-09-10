@@ -1,4 +1,4 @@
-from models.byte import ByteWriter
+from .byte import ByteWriter
 
 class SendingDataStartCommand:
     """

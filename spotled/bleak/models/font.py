@@ -1,4 +1,4 @@
-from models.enums import Effect
+from .enums import Effect
 
 class FontData:
     """

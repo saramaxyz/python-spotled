@@ -1,5 +1,5 @@
-from models.byte import ByteWriter
-from models.enums import Effect
+from .byte import ByteWriter
+from .enums import Effect
 
 class TimeData:
     """

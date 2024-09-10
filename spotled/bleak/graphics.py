@@ -1,4 +1,4 @@
-from models.commands import ByteWriter
+from .models.commands import ByteWriter
 
 def gen_color_bitmap(*lines, color_map={".": (0, 0, 0), "1": (255, 255, 255)}):
     """

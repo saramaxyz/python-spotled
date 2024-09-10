@@ -1,4 +1,4 @@
-from models.byte import ByteReader
+from .byte import ByteReader
 
 class GenericCommandResponse:
     """
@@ -107,7 +107,7 @@ class BufferSizeResponse:
 
 
 def getCommandResponse(data):
-    print(f"getCommandResponse -- Data:\n{data}")
+    
     response = GenericCommandResponse(data)
 
     response_map = {
@@ -122,8 +122,8 @@ def getCommandResponse(data):
     response_class = response_map.get(response.command_type)
 
     if response_class:
-        print(f"getCommandResponse -- Response:\n{response_class(response.content)}")
+        
         return response_class(response.content)
 
-    print(f"getCommandResponse -- Response:\n{response}")
+    
     return response

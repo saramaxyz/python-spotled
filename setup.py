@@ -1,28 +1,29 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='spotled',
-    version='1.3.0',
-    author="Ian Walton",
-    author_email="ian@iwalton.com",
-    description="Allows control of SPOTLED bluetooth led displays via Python. (Unofficial)",
+    name='spotled-bleak',
+    version='1.0.0',
+    author="Praful Mathur",
+    author_email="praful@sarama.app",
+    description="Allows control of SPOTLED bluetooth led displays via Python bleak library for Mac OS. (Fork of iwalton3/python-spotled)",
     license='MIT',
-    long_description=open('README.md').read(),
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/iwalton3/python-spotled",
-    packages=['spotled'],
+    packages=find_packages(),  # Automatically find packages
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.7',
-    install_requires=['gattlib'],
+    python_requires='>=3.8',
+    install_requires=['bleak'],
     include_package_data=True,
     package_data={
-        "spotled": ["fonts/*.yaff"],
+        "spotled_bleak": ["fonts/*.yaff"],
     },
 )
+

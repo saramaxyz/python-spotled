@@ -1,7 +1,7 @@
-from models.enums import Effect, Align
+from .models.enums import Effect, Align
 import os.path
 from typing import List
-from models.font import *
+from .models.font import *
 
 
 def parse_yaff_font(fontfile):
