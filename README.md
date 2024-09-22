@@ -12,7 +12,9 @@ The original support for gattlib is also included.
 
 Install as 
 ```
-pip install git+https://github.com/saramaxyz/python-spotled.git[gattlib]
+git clone https://github.com/saramaxyz/python-spotled.git
+cd python-spotled
+pip install .[gattlib]
 ```
 
 # Original README
