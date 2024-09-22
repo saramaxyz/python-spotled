@@ -276,17 +276,16 @@ class LedConnection:
 
 
 async def createLedConnection():
-    count = 0
     device = None
 
-    while count < 100:
+    for _ in range(50):
          try:
              device = await BleakScanner.find_device_by_filter(lambda d, ad: "SpotLED" in ad.local_name)
          except TypeError:
              pass
          else:
              break
-         count += 1
+         time.sleep(0.1)
 
     if device is None:
         raise Exception("No device found")
