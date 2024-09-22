@@ -1,4 +1,4 @@
-from bleak import BleakClient, BleakGATTCharacteristic
+from bleak import BleakClient, BleakGATTCharacteristic, BleakScanner
 from asyncio import Event
 import time
 import os.path
@@ -275,7 +275,22 @@ class LedConnection:
         await self.connection.disconnect()
 
 
-async def createLedConnection(address):
-    sender = LedConnection(address)
+async def createLedConnection():
+    count = 0
+    device = None
+
+    while count < 100:
+         try:
+             device = await BleakScanner.find_device_by_filter(lambda d, ad: "SpotLED" in ad.local_name)
+         except TypeError:
+             pass
+         else:
+             break
+         count += 1
+
+    if device is None:
+        raise Exception("No device found")
+
+    sender = LedConnection(device)
     await sender._init()
     return sender
