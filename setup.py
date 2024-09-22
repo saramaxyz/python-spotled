@@ -26,7 +26,6 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.8',
-    install_requires=['bleak'],
     include_package_data=True,
     package_data={
         "spotled_bleak": ["fonts/*.yaff"],
