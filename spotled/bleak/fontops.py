@@ -57,7 +57,7 @@ def parse_font(fontfile):
 
 
 def find_and_load_font(font_name):
-    base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
+    base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../fonts")
     extensions = ["yaff", "draw"]
 
     # Try to find a file with one of the extensions

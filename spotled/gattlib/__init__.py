@@ -670,7 +670,7 @@ def parse_font(fontfile):
     raise TypeError('Unknown font type.')
 
 def find_and_load_font(font):
-    try_font = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fonts', f'{font}.yaff')
+    try_font = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../fonts', f'{font}.yaff')
     if os.path.exists(try_font):
         font = try_font
     elif not os.path.exists(font):
