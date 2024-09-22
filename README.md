@@ -1,9 +1,19 @@
 # [Forked] SPOTLED Python Library
 
 ## Modification
-I used Bleak as it is cross platform and supports Mac OS with Core Bluetooth which I needed. 
+I added support for Bleak as it supports all OS including Mac OS with Core Bluetooth. 
 
-This library is currently broken will fix and tag it as latest.
+Install as 
+```
+pip install git+https://github.com/saramaxyz/python-spotled.git
+```
+
+The original support for gattlib is also included. 
+
+Install as 
+```
+pip install git+https://github.com/saramaxyz/python-spotled.git[gattlib]
+```
 
 # Original README
 This allows you to control bluetooth led name badges which use the SPOTLED app. You can buy them here:
